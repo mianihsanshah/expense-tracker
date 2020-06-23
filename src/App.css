@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* body {
+  background-color: #f7f7f7;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center;  
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+} */
+  
+
+body {
+  background: url(images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}
+
+.container{
+  font-family: Ubuntu, Lato, sans-serif;
+  max-width: 375px;
+  min-height: 500px;
+  margin: 0 auto;
+  background-color: #FFF;
+  box-shadow: 0 0 15px gray;
+  margin-top: 50px;
+  padding: 13px 45px;
+  border-radius: 10px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.account-summary-container-4 {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0 0 8px gray;
+  border-radius: 10px;
+  padding: 6px;    
+  margin: 6px 0;  
+}
+
+
+.money-plus-1 {
+  color: #2ecc71;
+  font-weight: bold;  
+}
+
+.money-minus-1 {
+  color: #c0392b;
+  font-weight: bold;  
+}
+
+.money-plus-2 {
+  color: #b6960a;
+  font-weight: bold;
+}
+
+.money-minus-2 {
+  color: #2da3ad;
+  font-weight: bold;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color:green;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+  font-size: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
   color: white;
+} 
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #b6960a;
+}
+
+.list li.plus:hover {
+  border-right: 5px solid #b6960a;
+  background-color: #b6960a;
+  color: #f7f7f7
+}
+
+.list li.minus {
+  border-right: 5px solid #2da3ad;
+}
+
+.list li.minus:hover {
+  border-right: 5px solid #2da3ad;
+  background-color: #2da3ad;
+  color: #f7f7f7
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #8a6a66;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
 }
