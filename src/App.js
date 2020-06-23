@@ -15,7 +15,7 @@ import {Footer} from './components/Footer';
 import { GlobalProvider } from './context/GlobalState';
 
 function App() {
-  return (
+  return (      
       <GlobalProvider>        
         <div className="container">
           <Header />
